@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'ui/mainscreen.dart';
+import 'package:paystreet/ui/main_screen.dart';
+
 
 void main() {
   runApp(MyApp());
