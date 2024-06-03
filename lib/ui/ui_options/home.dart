@@ -48,7 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 Text('Transactions', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
                 Text('See all', style: TextStyle(color: Colors.blue)),
               ],
-            ),
+            ), //
             SizedBox(height: 20),
             TransactionList(),
           ],
