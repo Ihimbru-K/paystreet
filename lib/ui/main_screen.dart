@@ -15,7 +15,7 @@ class _MainScreenState extends State<MainScreen> {
   static const String nameValue = "John Doe";
   static const String currentBalance = "\$7,860.00";
 
-  static const List<Widget> _widgetOptions = <Widget>[
+  static List<Widget> _widgetOptions = <Widget>[
     HomeScreen(currentBalance: currentBalance),
     TicketScreen(),
     StatsScreen(),
@@ -35,19 +35,19 @@ class _MainScreenState extends State<MainScreen> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
-        leading: CircleAvatar(
+        leading: const CircleAvatar(
           backgroundImage: AssetImage('assets/profile_image.png'), // Placeholder image
         ),
-        title: Column(
+        title: const Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text('Hi $nameValue', style: TextStyle(color: Colors.black)),
             Text('Good evening', style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold)),
           ],
         ),
-        actions: [
+        actions: const [
           CircleAvatar(
-            backgroundImage: AssetImage('assets/notification_icon.png'), // Placeholder image
+            backgroundImage: AssetImage('assets/qr.png'), // Placeholder image
           ),
         ],
       ),
@@ -72,7 +72,7 @@ class _MainScreenState extends State<MainScreen> {
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Color(0xFF6669E0),
+        selectedItemColor: const Color(0xFF6669E0),
         onTap: _onItemTapped,
       ),
     );

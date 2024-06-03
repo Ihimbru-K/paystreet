@@ -19,9 +19,9 @@ class ServiceButtons extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             _buildServiceButton(context, 'assets/agent.png', 'Become an Agent', Color(0xFFFAF5CF)),
-            _buildServiceButton(context, 'assets/withdraw.png', 'Withdraw Funds', Color(0xFFFACFF3)),
-            _buildServiceButton(context, 'assets/ask4pay.png', 'Ask4 Pay', Color(0xFFDDCFFA)),
-            _buildServiceButton(context, 'assets/more.png', 'More', Color(0xFFF1FACF)),
+            _buildServiceButton(context, 'assets/education.png', 'Education Payment', Color(0xFFFACFF3)),
+            _buildServiceButton(context, 'assets/withdraw.png', 'Withdraw Funds', Color(0xFFDDCFFA)),
+            _buildServiceButton(context, 'assets/ask4pay.png', 'Ask4 Pay', Color(0xFFF1FACF)),
           ],
         ),
       ],

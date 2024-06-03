@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+import '../../widgets/balance_container.dart';
+import '../../widgets/service_buttons.dart';
+import '../../widgets/transactions_list.dart';
+
 class HomeScreen extends StatefulWidget {
   final String currentBalance;
 
