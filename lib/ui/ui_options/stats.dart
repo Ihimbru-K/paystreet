@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class StatsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return const Center(
       child: Text('Stats Screen'),
     );
   }
