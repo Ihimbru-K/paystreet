@@ -15,7 +15,10 @@ class BalanceContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: balanceContainerColor,
+      decoration: BoxDecoration(
+        color: balanceContainerColor,
+        borderRadius: BorderRadius.circular(13),
+      ),
       height: 182,
       width: double.infinity,
       child: Column(
@@ -42,23 +45,35 @@ class BalanceContainer extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              ElevatedButton.icon(
+              ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   backgroundColor: buttonColor,
                   fixedSize: Size(172, 76),
                 ),
                 onPressed: () {},
-                icon: Icon(Icons.download, color: Colors.white),
-                label: Text('Fund Account', style: TextStyle(color: Colors.white, fontSize: 18)),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text('Fund Account', style: TextStyle(color: Colors.white, fontSize: 18)),
+                    SizedBox(height: 5),
+                    Image.asset("assets/download.png", height: 24),
+                  ],
+                ),
               ),
-              ElevatedButton.icon(
+              ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   backgroundColor: buttonColor,
                   fixedSize: Size(172, 76),
                 ),
                 onPressed: () {},
-                icon: Icon(Icons.arrow_forward, color: Colors.white),
-                label: Text('Transfer', style: TextStyle(color: Colors.white, fontSize: 18)),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text('Transfer', style: TextStyle(color: Colors.white, fontSize: 18)),
+                    SizedBox(height: 5),
+                    Image.asset("assets/send.png", height: 24),
+                  ],
+                ),
               ),
             ],
           ),
