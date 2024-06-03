@@ -21,7 +21,7 @@ class TransactionList extends StatelessWidget {
           '10 May 2023, 10:45',
           '+\$2,800.00',
         ),
-        SizedBox(height: 10),
+        SizedBox(height: 1),
         _buildTransactionItem(
           context,
           'assets/concert.png', // Placeholder image
@@ -44,11 +44,11 @@ class TransactionList extends StatelessWidget {
             color: transactionBackgroundColor,
             borderRadius: BorderRadius.circular(8),
           ),
-          child: Image.asset(assetPath),
+          child: Image.asset(assetPath, width: 20, height: 20,),
         ),
-        title: Text(title),
-        subtitle: Text(subtitle),
-        trailing: Text(trailing, style: TextStyle(fontSize: 20)),
+        title: Text(title, style: const TextStyle(fontSize: 14, color: Color(0xff48484E)),),
+        subtitle: Text(subtitle, style: const TextStyle(fontSize: 12, color: Color(0xff8D8D94)),),
+        trailing: Text(trailing, style: const TextStyle(fontSize: 20)),
       ),
     );
   }

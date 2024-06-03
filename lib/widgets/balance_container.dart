@@ -14,12 +14,14 @@ class BalanceContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final double screenHeight = MediaQuery.of(context).size.height;
     return Container(
       decoration: BoxDecoration(
         color: balanceContainerColor,
         borderRadius: BorderRadius.circular(13),
       ),
-      height: 182,
+      //height: 182,
+      height: screenHeight*0.3,
       width: double.infinity,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -27,7 +29,7 @@ class BalanceContainer extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('Current Balance', style: TextStyle(color: Colors.white)),
+              const Text('Current Balance', style: TextStyle(color: Colors.white, fontSize: 12)),
               IconButton(
                 icon: Icon(
                   obscureBalance ? Icons.visibility_off : Icons.visibility,
@@ -46,11 +48,9 @@ class BalanceContainer extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: buttonColor,
-                  fixedSize: Size(172, 76),
-                ),
-                onPressed: () {},
+                onPressed: () {
+                  // Button pressed callback
+                },
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -59,12 +59,19 @@ class BalanceContainer extends StatelessWidget {
                     Image.asset("assets/download.png", height: 24),
                   ],
                 ),
+                style: ButtonStyle(
+                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10), // adjust the radius as needed
+                    ),
+                  ),
+                  fixedSize: MaterialStateProperty.all<Size>(
+                    Size(172, 76), // adjust the width and height as needed
+                  ),
+                  backgroundColor: MaterialStateProperty.all<Color>(buttonColor),
+                ),
               ),
               ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: buttonColor,
-                  fixedSize: Size(172, 76),
-                ),
                 onPressed: () {},
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -74,7 +81,14 @@ class BalanceContainer extends StatelessWidget {
                     Image.asset("assets/send.png", height: 24),
                   ],
                 ),
-              ),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: buttonColor,
+                  fixedSize: Size(172, 76),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                ),
+              )
             ],
           ),
         ],
