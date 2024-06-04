@@ -38,7 +38,7 @@ class BalanceContainer extends StatelessWidget {
                 onPressed: toggleVisibility,
               ),
             ],
-          ),
+          ),//
           Text(
             obscureBalance ? '******' : currentBalance,
             style: TextStyle(color: Colors.white, fontSize: 30),
