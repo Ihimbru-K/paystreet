@@ -51,14 +51,6 @@ class BalanceContainer extends StatelessWidget {
                 onPressed: () {
                   // Button pressed callback
                 },
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text('Fund Account', style: TextStyle(color: Colors.white, fontSize: 18)),
-                    SizedBox(height: 5),
-                    Image.asset("assets/download.png", height: 24),
-                  ],
-                ),
                 style: ButtonStyle(
                   shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                     RoundedRectangleBorder(
@@ -69,6 +61,14 @@ class BalanceContainer extends StatelessWidget {
                     Size(172, 76), // adjust the width and height as needed
                   ),
                   backgroundColor: MaterialStateProperty.all<Color>(buttonColor),
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text('Fund Account', style: TextStyle(color: Colors.white, fontSize: 18)),
+                    SizedBox(height: 5),
+                    Image.asset("assets/download.png", height: 24),
+                  ],
                 ),
               ),
               ElevatedButton(
