@@ -5,12 +5,12 @@ class ServiceButtons extends StatelessWidget {
   Widget build(BuildContext context) {
     final double screenHeight = MediaQuery.of(context).size.height;
     return Container(
-      height: screenHeight * 0.25,
+      height: screenHeight * 0.3,
       decoration: BoxDecoration(
         color: Color(0xffFFFFFF),
         borderRadius: BorderRadius.circular(10),
       ),
-      padding: const EdgeInsets.all(8.0),
+    //  padding: const EdgeInsets.all(8.0),
       child: Column(
         children: [
           Expanded(
@@ -24,13 +24,13 @@ class ServiceButtons extends StatelessWidget {
               ],
             ),
           ),
-         // const SizedBox(height: 9),
+         const SizedBox(height: 5),
           Expanded(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 _buildServiceButton(context, 'assets/agent.png', 'Become an Agent', Color(0xFFFAF5CF)),
-                _buildServiceButton(context, 'assets/education.png', 'EducationPaymen', Color(0xFFFACFF3)),
+                _buildServiceButton(context, 'assets/education.png', 'Education payment', Color(0xFFFACFF3)),
                 _buildServiceButton(context, 'assets/withdraw.png', 'Withdraw Funds', Color(0xFFDDCFFA)),
                 _buildServiceButton(context, 'assets/ask4pay.png', 'Ask4 Pay', Color(0xFFF1FACF)),
               ],

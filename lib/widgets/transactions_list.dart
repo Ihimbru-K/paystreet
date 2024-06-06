@@ -13,7 +13,7 @@ class TransactionList extends StatelessWidget {
           '12 May 2023, 09:00',
           '-\$500.00',
         ),
-        SizedBox(height: 10),
+        const SizedBox(height: 10),
         _buildTransactionItem(
           context,
           'assets/transfer.png', // Placeholder image
