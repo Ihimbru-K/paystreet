@@ -73,6 +73,13 @@ class BalanceContainer extends StatelessWidget {
               ),
               ElevatedButton(
                 onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: buttonColor,
+                  fixedSize: Size(172, 76),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -80,13 +87,6 @@ class BalanceContainer extends StatelessWidget {
                     SizedBox(height: 5),
                     Image.asset("assets/send.png", height: 24),
                   ],
-                ),
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: buttonColor,
-                  fixedSize: Size(172, 76),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
                 ),
               )
             ],
